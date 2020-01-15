@@ -1,7 +1,7 @@
 <h1>新規タスク</h1>
-<%= form_for(@task) do |f| %>
+<%= form_for(@task) do |f| %>            <%# formの作成 %>
   <div><%= f.label :title %></div>       <%# title（タスク）の項目名 %>
   <div><%= f.text_field :title %></div>  <%# title（タスク）の入力エリア %>
   <div><%= f.submit %></div>             <%# 送信ボタン %>
 <% end %>
-<%= link_to '戻る', tasks_path %>
+<%= link_to '戻る', tasks_path %> <!-- htmlのaタグを作成 -->

@@ -9,10 +9,13 @@
     <% @tasks.each do |task| %>
       <tr>
         <td><%= task.title %></td>
-        <td><%= link_to '編集', edit_task_path(task) %></td>
-        <td><%= link_to '削除', task_path(task), method: :delete %></td>
+        <!-- <%= link_to %>で作成されるformは、デフォルトでPOSTメソッドのリクエストを送信 -->
+        <td><%= link_to '編集', edit_task_path(task) %></td> <!-- htmlのaタグを作成 -->
+        
+        <!-- DELETEメソッドのリクエストを送信するために第3引数にmethod: :deleteを指定 -->
+        <td><%= link_to '削除', task_path(task), method: :delete %></td> <!-- htmlのaタグを作成 -->
       </tr>
     <% end %>
   </tbody>
 </table>
-<%= link_to '追加', new_task_path %>
+<%= link_to '追加', new_task_path %> <!-- htmlのaタグを作成 -->
